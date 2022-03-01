@@ -1,6 +1,6 @@
 baseURL = "https://subhAShita.github.io/"
 languageCode = "en-us"
-title = "पुराणे विश्वासटिप्पन्यः"
+title = "सुभाषित-सङ्ग्रहः"
 theme = "sanskrit-documentation-theme-hugo"
 publishDir = "build_github"
 disablePathToLower = true
