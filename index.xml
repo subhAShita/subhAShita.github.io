@@ -39,7 +39,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://subhAShita.github.io/saMskRtam/padyam/show/</guid>
-      <description>  { let quoteId = module_main.default.query.getParam(&#34;quoteId&#34;); showQuote(quoteId); } function showQuote(quoteId) { if (quoteId) { let includeElement = document.querySelector(&#34;#quoteInclude&#34;); let newUrl = includeElement.getAttribute(&#34;url&#34;); newUrl = newUrl.replace(/main\/.+/, `main/${quoteId[0]}/${quoteId[1]}/${quoteId[2]}/${quoteId[3]}/${quoteId[4]}/${quoteId}.md`); includeElement.setAttribute(&#34;url&#34;, newUrl); } }   </description>
+      <description>
+  { let quoteId = module_main.default.query.getParam(&#34;quoteId&#34;); showQuote(quoteId); } function showQuote(quoteId) { if (quoteId) { let includeElement = document.querySelector(&#34;#quoteInclude&#34;); let newUrl = includeElement.getAttribute(&#34;url&#34;); newUrl = newUrl.replace(/main\/.+/, `main/${quoteId[0]}/${quoteId[1]}/${quoteId[2]}/${quoteId[3]}/${quoteId[4]}/${quoteId}.md`); includeElement.setAttribute(&#34;url&#34;, newUrl); } }   </description>
     </item>
     
   </channel>
