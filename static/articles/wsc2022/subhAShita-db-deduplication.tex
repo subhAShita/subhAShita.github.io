@@ -1,0 +1,94 @@
+% Template - https://sanskrit.uohyd.ac.in/18WSC/Style_files/CS_and_DH.tex
+
+
+\documentclass[11pt]{article}
+\usepackage{scl}
+\usepackage{times}
+\usepackage{url}
+\usepackage{latexsym}
+\usepackage{lineno}
+
+\usepackage{fontspec, xunicode, xltxtra}
+\newfontfamily\skt[Script=Devanagari]{Sanskrit 2003}
+
+\title{A universal subhāṣita database, and deduplicating sanskrit texts}
+
+\author{Vishvas Vasuki \\
+  Dyugaṅgā, Beṅgaḷūru - 92 \\
+  {\tt vishvas.vasuki+ACAD@gmail}
+\\}
+
+\date{}
+
+\begin{document}
+\maketitle
+%\linenumbers
+\begin{abstract}
+Subhāṣita-s are popular and beautiful Sanskrit quotations. In this paper, we propose a universal open-source subhāṣita database. As a part of it, we present an algorithm for deduplicating sanskrit texts, as well as one for identifying non-duplicate vairants of a given quote.
+\end{abstract}
+
+\section{Motivation}
+Subhāṣitas are popular and beautiful Sanskrit quotations - they're usually verses. One of the greatest (and useful) pleasures I've had in tough times is retreat for a while into the world of beautiful Subhāṣitas- so as to burst forth with renewed wisdom and energy. 
+
+Since ages, they have been lovingly compiled \cite{subhashita-1952} and memorized. I especially like online collections curated by some friends and myself since a book is not always available, and I want to collect + easily access choice ones for future enjoyment. But it is tedious (atleast for me) to sit in front of a computer to do the following:
+
+\begin{itemize}
+
+\item
+  read them,
+\item
+  or scour the internet for new ones
+\item
+  or collect favorites in a spreadsheet
+\item
+  or just annotate them with comments.
+\end{itemize}
+
+So, it is desirable to make the above as simple and easy as possible, and to share our collective labor so that we can benefit more easily from each others' work.
+
+\section{A universal database}
+
+We've set out to build a database of Subhāṣitas - which is:
+
+\begin{itemize}
+
+\item
+  \textbf{Universal}
+
+  \begin{itemize}
+  
+  \item
+    Its goal is to contain within it every worthy subhAShita*- ever
+    composed.
+  \item
+    In fact, the ambition encompasses all \emph{languages}, \emph{verse-
+    and }prose- forms.
+  \end{itemize}
+\item
+  \textbf{Freely and easily available}. Anyone should be able to
+
+  \begin{itemize}
+  
+  \item
+    Access it
+  \item
+    Export it to other formats
+  \item
+    Present it in any way users will find convenient.
+  \end{itemize}
+\item
+  \textbf{Growing constantly in number}, thanks to contemporary compositions.
+\item
+  \textbf{Growing constantly in annotations/ ratings}, where annotations include rating, description, translations, metre, flaws,
+    sources \ldots.
+\end{itemize}
+
+\section{Expected extensions}
+We hope that this will motivate other such long-sought-after universal databases for sanskrit connoiseurs, like: one for metres.
+
+The front-end clients built for this database could serve as a model for other kAvya readers. Similarly, one can build a collaboratively annotated and rated collection of verses/ sentences within the context of long sequential works (rather than free floating subhAShita-s).
+
+% include your own bib file like this:
+\bibliographystyle{acl}
+\bibliography{scl}
+\end{document}
