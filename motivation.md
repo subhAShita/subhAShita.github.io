@@ -21,7 +21,7 @@ unicode_script = "devanagari"
 We've set out to build a **database of [subhAShita](https://en.wikipedia.org/wiki/Subhashita)-s (= worthy quotes)*- which is:
 
 - **Universal**
-  - Its goal is to contain within it **every worthy subhAShita*- ever composed.
+  - Its goal is to contain within it **every worthy subhAShita**- ever composed.
   - In fact, the ambition encompasses all *languages*, *verse- and *prose- forms.
 - **Freely and easily available**. Anyone should be able to
   - Access it
