@@ -1,6 +1,7 @@
 +++
 title = "Technical details"
 +++
+[Pdf article](/articles/wsc2022/subhAShita-db-deduplication.pdf)
 
 ## Requirements
 - Maintenance costs (including server and hosting fees) should be zero.
