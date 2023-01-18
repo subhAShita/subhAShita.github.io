@@ -12,3 +12,4 @@ title = "Technical details"
 ## Current solution
 - Quotes are stored as simple markdown files with TOML metadata, so as to capture annotations such as meter, topic, poetic ornamentation, rasas, bhAva-s, sources, secondary sources, etc..
 - Within each markdown file, the text and various commentaries or presentations are stored under html details tags (which contain relevant content in markdown format).
+- For location of databases, see [contribution](../contribution) page.
