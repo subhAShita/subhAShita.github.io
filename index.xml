@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>सुभाषितानि Quotes on सुभाषित-सङ्ग्रहः</title>
+    <link>https://subhAShita.github.io/</link>
+    <description>Recent content in सुभाषितानि Quotes on सुभाषित-सङ्ग्रहः</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://subhAShita.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contribution</title>
+      <link>https://subhAShita.github.io/contribution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://subhAShita.github.io/contribution/</guid>
+      <description>A note for subhAShita collectors Are you a collector of subhAShita-s? Would you like to contribute your collection to the database? You&amp;rsquo;re very welcome! But you should make your collection available in such a way that a machine which does not know human languages can distinguish individual quotes, ratings and various other details. सङ्क्षेपेण - मानुषभाषाङ्कामप्य् अनवगच्छता यन्त्रेणापि &amp;ldquo;अस्यां सुभाषितावल्यां सन्तीमे सुभाषिताः। अमुकस्य सुभाषीतस्यैते विषयाः। अस्मिन् सुभाषीते कस्यचिदियं टिप्पणिः। सुभाषितमिदम् अस्मै ५/५ इति मानेन रोचते। अपरस्मै ३/५ इति मानेन। अस्य सुभाषितस्य लेखकोऽसौ।&amp;rdquo; इति ग्राह्यं स्यात्। तेन पाठकानुकूलं संलक्ष्य भवितुमर्हति सङ्ग्रहस्य यान्त्रिक-प्रस्तुतिः। sa-padyas collected here.</description>
+    </item>
+    <item>
+      <title>Motivation</title>
+      <link>https://subhAShita.github.io/motivation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://subhAShita.github.io/motivation/</guid>
+      <description>Motivation One of the greatest (and useful) pleasures we&amp;rsquo;ve had in tough times is retreat for a while into the world of beautiful subhAShita-s - and then burst back out like the vRtraghna armed with dadhIchi&amp;rsquo;s bones. I especially like online collections curated by some friends and myself: since a book is not always available, and I want to collect + easily access choice ones for future enjoyment. But it is tedious (atleast for me) to sit in front of a computer to do the following: read them, or scour the internet for new ones or collect favorites in a spreadsheet or just annotate them with comments.</description>
+    </item>
+    <item>
+      <title>Technical details</title>
+      <link>https://subhAShita.github.io/technical-details/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://subhAShita.github.io/technical-details/</guid>
+      <description>Pdf article&#xA;Requirements Maintenance costs (including server and hosting fees) should be zero. The quote database itself be independent of any particular UI system. It should be easy to contribute to the quote database - but such contributions should be verifiable. Data format should be easily parsable in a variety of machine languages. Current solution Quotes are stored as simple markdown files with TOML metadata, so as to capture annotations such as meter, topic, poetic ornamentation, rasas, bhAva-s, sources, secondary sources, etc.</description>
+    </item>
+    <item>
+      <title>दर्शकः</title>
+      <link>https://subhAShita.github.io/saMskRtam/padyam/show/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://subhAShita.github.io/saMskRtam/padyam/show/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
