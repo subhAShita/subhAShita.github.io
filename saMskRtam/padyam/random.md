@@ -10,10 +10,28 @@ title = "अन्ध-चितिः"
 <div id="quoteInclude" class="js_include" url="https://raw.githubusercontent.com/subhAShita/db_toml_md__sa__padya/master/main/s/h/r/I/k/shrIkamTha.md"  newLevelForH1="2" includeTitle="true" metadataDetailName> </div>
 
 <script>
-module_uiLib.default.navigation.loadDropdownFromTSV(`${indexUrl}ratings/_summary.tsv`, 'dropdown_ratings', (x) => getRandomQuote("ratings", x));
 
+function dropdownValueMaker(x) {
+  let value = `${x.split("\t")[2]}`;
+  if (value == "value") {
+    value = "*";
+  }
+  return value;
+}
+
+function dropdownTextMaker(x) {
+  let value = `${x.split("\t")[0]}`;
+  if (value == "value") {
+    value = "*";
+  }
+  return value;
+}
+
+module_uiLib.default.navigation.loadDropdownFromTSV(`${indexUrl}ratings/_summary.tsv`, 'dropdown_ratings', dropdownTextMaker, dropdownValueMaker, (x) => getRandomQuote());
+
+setDropdownValuesFromQuery();
 {
-  let quoteId = module_uiLib.default.query.getParam("quoteId");
+  let quoteId = module_uiLib.default.query.getParam("quoteId") || "shrIkamTha";
   showQuote(quoteId);
 }
 </script>

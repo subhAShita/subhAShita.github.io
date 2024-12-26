@@ -11,9 +11,20 @@ function showQuote(quoteId) {
     }
 }
 
-async function getQuotes(subtype, indexRow, filterSet=null) {
-    let indexTsv = `${indexUrl}${subtype}/${indexRow.split("\t")[2]}.tsv`;
-    console.log(indexRow.split("\t"), indexTsv);
+function setDropdownValuesFromQuery() {
+    let filterTypes = ["ratings"];
+    for (let i = 0; i < filterTypes.length; i++) {
+        let filterType = filterTypes[i];
+        let queryValue = module_uiLib.default.query.getParam(filterType) || "*";
+        var dropdown = document.getElementById(`dropdown_${filterType}`);
+        dropdown.set(queryValue);
+    }
+    
+}
+
+async function getQuotes(filterType, filterValue, filterSet=null) {
+    let indexTsv = `${indexUrl}${filterType}/${filterValue}.tsv`;
+    // console.log(indexRow.split("\t"), indexTsv);
     return fetch(indexTsv)
         .then(response => {
             if (!response.ok) {
@@ -34,14 +45,20 @@ async function getQuotes(subtype, indexRow, filterSet=null) {
 async function getRandomQuote() {
     // TODO : consider transliterating the value and doing   
     //  module_uiLib.default.query.setParamsAndGo();
-    let subtype = "ratings";
-    var dropdown = document.getElementById(`dropdown_${subtype}`);
-    let indexRow = dropdown.options[dropdown.selectedIndex].value;
-    console.log(indexRow);
-    let filterSet = null;
-    let quotes = await getQuotes(subtype, indexRow, filterSet);
+    let filterTypes = ["ratings"];
+    let paramDict = {};
+    let quotes = null;
+    for (let i = 0; i < filterTypes.length; i++) {
+        let filterType = filterTypes[i];
+        var dropdown = document.getElementById(`dropdown_${filterType}`);
+        let filterValue = dropdown.options[dropdown.selectedIndex].value;
+        paramDict[filterType] = filterValue;
+        quotes = await getQuotes(filterType, filterValue, quotes);
+    }
     const randomIndex = Math.floor(Math.random() * quotes.length);
-    const randomRow = quotes[randomIndex];
-    console.log(randomRow);
-    module_uiLib.default.query.setParamsAndGo({"quoteId": randomRow});
+    const randomQuote = quotes[randomIndex];
+    paramDict["queryId"] = randomQuote;
+    console.log(paramDict, randomQuote);
+    alert(randomQuote);
+    // module_uiLib.default.query.setParamsAndGo(paramDict);
 }
