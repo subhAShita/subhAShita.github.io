@@ -37,7 +37,7 @@ async function setDropdownValuesFromQuery() {
     console.log("Exiting setDropdownValuesFromQuery");
 }
 
-async function getQuotes(filterType, filterValue, filterSet=null) {
+async function getQuotes(filterType, filterValue, filterSet = null) {
     let indexTsv = `${indexUrl}${filterType}/${filterValue}.tsv`;
     // console.log(indexRow.split("\t"), indexTsv);
     return fetch(indexTsv)
@@ -57,6 +57,30 @@ async function getQuotes(filterType, filterValue, filterSet=null) {
         }).catch(error => console.error('There was a problem with the fetch operation:', error));
 }
 
+function selectRandomOption(dropdownId) {
+    const dropdown = document.getElementById(dropdownId);
+    if (!dropdown) {
+        console.error(`Dropdown with ID "${dropdownId}" not found.`);
+        return;
+    }
+    const options = dropdown.options;
+
+    if (options.length <= 1) {
+        console.log('Dropdown has no options to select.');
+        return;
+    }
+
+    // Generate a random index, excluding the first option
+    const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1;
+
+    // Set the selected index to the random index
+    dropdown.selectedIndex = randomIndex;
+
+    console.log(`Selected option: ${dropdown.options[randomIndex].text}`);
+    return dropdown.options[randomIndex].value;
+}
+
+
 async function getRandomQuote() {
     // TODO : consider transliterating the value and doing   
     //  module_uiLib.default.query.setParamsAndGo();
@@ -71,7 +95,14 @@ async function getRandomQuote() {
             quotes = await getQuotes(filterType, filterValue, quotes);
         }
     }
-    if (!quotes || quotes.length == 0) {
+    if (!quotes) {
+        //     TODO : Get a letter by quote weight.
+        selectRandomOption('yourDropdownId'); // Replace 'yourDropdownId' with the actual dropdown ID
+        let filterType = "first_letter";
+        let filterValue = selectRandomOption(`dropdown_${filterType}`);
+        quotes = await getQuotes(filterType, filterValue, filterSet = null);
+    }
+    if (quotes.length == 0) {
         alert("No quotes found.");
         return;
     }
