@@ -6,13 +6,13 @@ publishDir = "build_github"
 disablePathToLower = true
 
 [params]
-  githubEditMePathBase = "https://github.com/subhAShita/subhAShita.github.io/edit/content/"
+  githubEditMePathBase = "https://github.com/subhAShita/subhAShita.github.io/edit/master/content/"
   contactLink = "https://github.com/subhAShita/subhAShita.github.io/issues/new"
   build_img = "https://github.com/subhAShita/subhAShita.github.io/actions/workflows/build.yml/badge.svg"
   build_url = "https://github.com/subhAShita/subhAShita.github.io/actions/workflows/build.yml"
   fullSearchURL = "/full_search"
   env = "production"  
-  disqusShortcode = "subhashita-site"
+  # disqusShortcode = "subhashita-site"
 
 [outputs]
   home = ["HTML", "RSS", "JSON", "CSV"]
