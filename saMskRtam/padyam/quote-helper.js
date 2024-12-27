@@ -127,7 +127,21 @@ async function getRandomQuote() {
 
 async function pratimAlA(){
     // Rules per R Ganesh - https://www.prekshaa.in/pratim%C4%81l%C4%81-lovely-garland-world-literary-games
-    divMessage.innerHTML = "<h2>Not implemented. Contribute <a href='https://github.com/subhAShita/subhAShita.github.io/edit/content/saMskRtam/padyam/quote-helper.js'>code?</h2>"
+    let includeElement = document.querySelector("#quoteInclude");
+    let metadata = JSON.parse(includeElement.dataset.metadataJson);
+    console.log(metadata);
+    let letters = metadata["pratimaalaa_letters"];
+    if (letters) {
+        const randomIndex = Math.floor(Math.random() * letters.length);
+        const randomLetter = letters[randomIndex];
+        console.log(randomLetter, letters);
+        var dropdown = document.getElementById(`dropdown_first_letter`);
+        dropdown.value = randomLetter;
+        getRandomQuote();
+    }
+    else {
+        divMessage.innerHTML = "<h2>Not implemented. Contribute <a href='https://github.com/subhAShita/subhAShita.github.io/edit/content/saMskRtam/padyam/quote-helper.js'>code?</h2>";
+    }
 }
 
 document.onload = async () => {

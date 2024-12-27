@@ -26,10 +26,14 @@ title = "अन्ध-चितिः"
 सुभासितेष्व् अन्धचित्यै किञ्चन यन्त्रं निर्मितम्।
 प्रयोगोदाहरणानि - 
 
-- एकाराद् आरभमाणेष्व् अत्र  Source: [TW](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=vvasuki5&sources=suhAsaH_-_muktakam&topics=*&meters=*&rasas=*&first_letter=*&quoteId=priyAyAHpr)। 
-- रोचक-शङ्कर-कृतेषु अन्धचितिर् अत्र यन्त्रेण [TW](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=vvasuki5&sources=rAjArAmaja-shankaraH&topics=*&meters=*&rasas=*&first_letter=*&quoteId=proktamayA) (just hit the "Again" button for fresh ones).
-- एवं सुहास-कृतेषु (@Suhas M सुहासो महेशसूनुः कविः बहुभाषाज्ञः भूतशास्त्रज्ञः ) - [TW](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=vvasuki5&sources=suhAsaH&topics=*&meters=*&rasas=*&first_letter=*&quoteId=miShpatrAk)
-- तथा कुशाग्र-कृतेषु - [TW](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=vvasuki5&sources=kushAgraH&topics=*&meters=*&rasas=*&first_letter=*&quoteId=mukhAlamkR)
+- एकाराद् आरभमाणेष्व् अत्र  Source: [TW](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=vvasuki5&sources=*&topics=*&meters=*&rasas=*&first_letter=e&quoteId=ekadvyaxar&secondary_sources=*)। 
+- कविशः
+  - रोचक-शङ्कर-कृतेषु अन्धचितिर् अत्र यन्त्रेण [TW](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=vvasuki5&sources=rAjArAmaja-shankaraH&topics=*&meters=*&rasas=*&first_letter=*&quoteId=proktamayA) (just hit the "Again" button for fresh ones).
+  - एवं सुहास-कृतेषु - [TW](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=vvasuki5&sources=suhAsaH&topics=*&meters=*&rasas=*&first_letter=*&quoteId=miShpatrAk)
+  - तथा कुशाग्र-कृतेषु - [TW](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=vvasuki5&sources=kushAgraH&topics=*&meters=*&rasas=*&first_letter=*&quoteId=mukhAlamkR)
+- सङ्ग्रहशः 
+  - महासुभाषितसङ्ग्रहगतेष्व् [अत्र](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=*&sources=*&secondary_sources=mahA-subhAShita-sangrahaH&topics=*&meters=*&rasas=*&first_letter=*&quoteId=kamchitxam)
+  - सुभाषित-रत्न-भाण्डागार-गतेष्व् [अत्र](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=*&sources=*&secondary_sources=mahA-subhAShita-sangrahaH&topics=*&meters=*&rasas=*&first_letter=*&quoteId=kamchitxam)
 - विश्वास-प्रियेष्व् अत्र [TW](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=vvasuki5&sources=suhAsaH_-_muktakam&topics=*&meters=*&rasas=*&first_letter=*&quoteId=priyAyAHpr)
 
 
