@@ -1,10 +1,10 @@
 let indexUrl = "https://raw.githubusercontent.com/subhAShita/db_toml_md__sa__padya/master/index/";
-let filterTypes = ["ratings", "sources", "topics", "meters", "rasas", "first_letter"];
+let filterTypes = ["ratings", "sources", "secondary_sources", "topics", "meters", "rasas", "first_letter"];
 
 
 function dropdownValueMaker(x) {
     let value = `${x.split("\t")[2]}`;
-    if (value == "file_key") {
+    if (value.startsWith("NO_")) {
         value = "*";
     }
     return value;
@@ -40,7 +40,7 @@ async function setDropdownValuesFromQuery() {
     for (let i = 0; i < filterTypes.length; i++) {
         let filterType = filterTypes[i];
         let queryValue = module_uiLib.default.query.getParam(filterType) || "*";
-        module_uiLib.default.navigation.loadDropdownFromTSV(`${indexUrl}${filterType}/_summary.tsv`, `dropdown_${filterType}`, dropdownTextMaker, dropdownValueMaker, (x) => getRandomQuote(), queryValue);
+        module_uiLib.default.navigation.loadDropdownFromTSV(`${indexUrl}${filterType}/_summary.tsv`, `dropdown_${filterType}`, dropdownTextMaker, dropdownValueMaker, (x) => getRandomQuote(), queryValue, ignoreHeader=true);
     }
     console.log("Exiting setDropdownValuesFromQuery");
 }
