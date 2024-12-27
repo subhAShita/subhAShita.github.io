@@ -1,6 +1,7 @@
 let indexUrl = "https://raw.githubusercontent.com/subhAShita/db_toml_md__sa__padya/master/index/";
 let filterTypes = ["ratings", "sources", "topics", "meters", "rasas", "first_letter"];
 
+
 function dropdownValueMaker(x) {
     let value = `${x.split("\t")[2]}`;
     if (value == "file_key") {
@@ -24,6 +25,12 @@ function showQuote(quoteId) {
         let newUrl = includeElement.getAttribute("url");
         newUrl = newUrl.replace(/main\/.+/, `main/${quoteId[0]}/${quoteId[1]}/${quoteId[2]}/${quoteId[3]}/${quoteId[4]}/${quoteId}.md`);
         includeElement.setAttribute("url", newUrl);
+
+        includeElement.insertAdjacentHTML('afterend',quoteId);
+
+        // TODO: THis is beign overwritten - why?
+        let inputQuoteId = document.querySelector("#inputQuoteId");
+        if (inputQuoteId) inputQuoteId.value = quoteId;
     }
 }
 
@@ -103,7 +110,10 @@ async function getRandomQuote() {
         quotes = await getQuotes(filterType, filterValue, filterSet = null);
     }
     if (quotes.length == 0) {
-        alert("No quotes found.");
+        let divMessage = document.querySelector("#divMessage");
+        if(divMessage) 
+            divMessage.textContent = "No quotes found.";
+        // alert(divMessage.textContent);
         return;
     }
     const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -112,4 +122,19 @@ async function getRandomQuote() {
     console.log(paramDict, randomQuote);
     // alert(JSON.stringify(paramDict));
     module_uiLib.default.query.setParamsAndGo(paramDict);
+}
+
+async function pratimAlA(){
+    // Rules per R Ganesh - https://www.prekshaa.in/pratim%C4%81l%C4%81-lovely-garland-world-literary-games
+    divMessage.innerHTML = "<h2>Not implemented. Contribute <a href='https://github.com/subhAShita/subhAShita.github.io/edit/content/saMskRtam/padyam/quote-helper.js'>code?</h2>"
+}
+
+document.onload = async () => {
+    document.addEventListener('sdThemeDoneEvent', function (event) {
+        // TODO: This is not being triggered - why?
+        console.log('Handling sdThemeDoneEvent:', event.detail.someData);
+        let inputQuoteId = document.querySelector("#inputQuoteId");
+        inputQuoteId.value = quoteId;
+
+    });
 }
