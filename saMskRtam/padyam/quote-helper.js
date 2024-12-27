@@ -35,17 +35,29 @@ function showQuote(quoteId) {
     }
 }
 
-async function setDropdownValuesFromQuery() {
-    console.log("Entering setDropdownValuesFromQuery");
+async function setFilterValueFromQuery(filterType) {
+    // TODO: Why's this not working?
+    let queryValue = module_uiLib.default.query.getParam(filterType) || null;
+    if (queryValue) {
+        const input = document.getElementById(`input_${filterType}`);
+        input.value = queryValue;
+    }
+}
+
+async function initFilterBoxes() {
+    console.log("Entering initFilterBoxes");
     for (let i = 0; i < filterTypes.length; i++) {
         let filterType = filterTypes[i];
-        let queryValue = module_uiLib.default.query.getParam(filterType) || "*";
-        module_uiLib.default.navigation.loadDropdownFromTSV(`${indexUrl}${filterType}/_summary.tsv`, `dropdown_${filterType}`, dropdownTextMaker, dropdownValueMaker, (x) => getRandomQuote(), queryValue, ignoreHeader = true);
+        let queryValue = module_uiLib.default.query.getParam(filterType) || null;
+        module_uiLib.default.navigation.loadDataListFromTSV(`${indexUrl}${filterType}/_summary.tsv`, `datalist_${filterType}`, dropdownTextMaker, dropdownValueMaker, (x) => getRandomQuote(), queryValue, true);
+        await setFilterValueFromQuery(filterType);
+
     }
-    console.log("Exiting setDropdownValuesFromQuery");
+    console.log("Exiting initFilterBoxes");
 }
 
 async function getQuotes(filterType, filterValue, filterSet = null) {
+    console.log("Getting quotes", filterType, filterValue);
     let indexTsv = `${indexUrl}${filterType}/${filterValue}.tsv`;
     // console.log(indexRow.split("\t"), indexTsv);
     return fetch(indexTsv)
@@ -90,27 +102,24 @@ function selectRandomOption(dropdownId) {
 
 
 async function getRandomQuote() {
-    // TODO : consider transliterating the value and doing   
-    //  module_uiLib.default.query.setParamsAndGo();
     let paramDict = {};
     let quotes = null;
     for (let i = 0; i < filterTypes.length; i++) {
         let filterType = filterTypes[i];
-        var dropdown = document.getElementById(`dropdown_${filterType}`);
-        let filterValue = "*";
-        if (dropdown.selectedIndex != -1) {
-            let filterValue = dropdown.options[dropdown.selectedIndex].value;
-            paramDict[filterType] = filterValue;
-        } 
-        if (filterValue != "*") {
+        var dropdown = document.getElementById(`input_${filterType}`);
+        let filterValue = dropdown.value;
+        paramDict[filterType] = filterValue;
+        console.log(filterType, filterValue);
+        if (filterValue != "*" && filterValue != "") {
             quotes = await getQuotes(filterType, filterValue, quotes);
         }
     }
     if (!quotes) {
         //     TODO : Get a letter by quote weight.
-        selectRandomOption('yourDropdownId'); // Replace 'yourDropdownId' with the actual dropdown ID
+        console.log("No filter seems selected. Picking randomly");
+        
         let filterType = "first_letter";
-        let filterValue = selectRandomOption(`dropdown_${filterType}`);
+        let filterValue = selectRandomOption(`datalist_${filterType}`);
         quotes = await getQuotes(filterType, filterValue, filterSet = null);
     }
     if (quotes.length == 0) {
@@ -138,17 +147,19 @@ async function pratimAlA() {
         const randomIndex = Math.floor(Math.random() * letters.length);
         const randomLetter = letters[randomIndex];
         console.log(randomLetter, letters);
-        var dropdown = document.getElementById(`dropdown_first_letter`);
+        var dropdown = document.getElementById(`input_first_letter`);
         let selectedOption = null;
-        let options = dropdown.options;
+        let options = document.getElementById(`datalist_first_letter`).options;
         for (let i = 0; i < options.length; i++) {
-            if (options[i].text.toLowerCase().startsWith(randomLetter)) {
+            if (options[i].text.split("|")[0] == randomLetter) {
+                console.log(options[i], randomLetter);
                 selectedOption = options[i];
+                dropdown.selectedIndex = i;
+                dropdown.value = selectedOption.value;
                 break;
             }
         }
         if (selectedOption) {
-            dropdown.value = selectedOption.value;
             getRandomQuote();
         } else {
             console.error("No index with letter ", randomLetter);

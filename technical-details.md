@@ -23,3 +23,5 @@ title = "Technical details"
 - Stats - author, sources etc..
 - Access keys/ shortcuts
 - Replace dropdowns with typable filters.
+- TODOs in quote-helper.js.
+- Better randomization.
