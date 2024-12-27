@@ -11,8 +11,9 @@ function dropdownValueMaker(x) {
 }
 
 function dropdownTextMaker(x) {
-    let value = `${x.split("\t")[0]}`;
-    if (value == "value") {
+    let fields = x.split("\t");
+    let value = `${fields[0]}|${fields[1]}`;
+    if (fields[0] == "value") {
         value = "*";
     }
     return value;
