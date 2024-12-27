@@ -35,7 +35,7 @@ title = "अन्ध-चितिः"
   - महासुभाषितसङ्ग्रहगतेष्व् [अत्र](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=*&sources=*&secondary_sources=mahA-subhAShita-sangrahaH&topics=*&meters=*&rasas=*&first_letter=*&quoteId=kamchitxam)
   - सुभाषित-रत्न-भाण्डागार-गतेष्व् [अत्र](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=*&sources=*&secondary_sources=mahA-subhAShita-sangrahaH&topics=*&meters=*&rasas=*&first_letter=*&quoteId=kamchitxam)
 - विश्वास-प्रियेष्व् अत्र [TW](https://subhashita.github.io/saMskRtam/padyam/random/?ratings=vvasuki5&sources=suhAsaH_-_muktakam&topics=*&meters=*&rasas=*&first_letter=*&quoteId=priyAyAHpr)
-
+- प्रतिमाला-क्रमेणापि क्रीडितुं शक्यम्। (अनुष्टुभ्-अपाकरणम् अन्तरा। )
 
 पुरा +एवं मुक्तकानि सङ्गृह्णामि स्म सद्भिः प्रकाशितानि।  
 इतोऽपि **मुक्तककोशो वर्धनीयः** - युष्मत्सङ्ग्रहान् सम्भाज्य +अनुगृह्णन्तु। कदाचिद् सापत्यकस्य मम चलनादिकाले रञ्जन-शिक्षणादौ प्रयोक्ष्यते - न तावत् काचित् पुस्तकादि-विक्रयणे वः क्षतिर् अपि स्यात्। 

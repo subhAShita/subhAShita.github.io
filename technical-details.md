@@ -17,7 +17,7 @@ title = "Technical details"
 
 ## UI
 ## TODOS
-- प्रतिमाला
+- प्रतिमाला - अनुष्टुभ्-अपाकरणे विकल्पः। अक्षरालाभेऽक्षरान्तरग्रहणम्। 
 - Stats - author, sources etc..
 - Access keys/ shortcuts
 - Replace dropdowns with typable filters.
