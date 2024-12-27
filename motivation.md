@@ -18,11 +18,12 @@ unicode_script = "devanagari"
   - and to share our collective labor so that we can benefit more easily from each others' work.
 
 ## A Universal database
-We've set out to build a **database of [subhAShita](https://en.wikipedia.org/wiki/Subhashita)-s (= worthy quotes)*- which is, at least so long as computers and internet lasts (\~200 yrs based on unexploited fuel reserves):
+We've set out to build a **database of [subhAShita](https://en.wikipedia.org/wiki/Subhashita)-s (= worthy quotes)**- which is,  
+at least so long as computers and internet lasts (\~200 yrs based on unexploited fuel reserves):
 
 - **Universal**
   - Its goal is to contain within it **every worthy subhAShita**- ever composed.
-  - In fact, the ambition encompasses all *languages*, *verse- and *prose- forms.
+  - In fact, the ambition encompasses all *languages*, *verse-* and *prose-* forms.
 - **Freely and easily available**. Anyone should be able to
   - Access it
   - Export it in other formats
