@@ -10,3 +10,5 @@ title = "Contribution"
 
 ## For poets
 - Contributing to this database counts as publication. There will be clear public record of the contribution, with edit history. So, no need to fear theft followed by inability to prove priority.
+- Generally, no need to worry about book sale revenue. People who like books will mostly prefer that to the exclusion of this; and vice versa.
+- Since contributing quotes does not exactly replicate the book from where it is sourced - there is no copyright violation too. Given the big difference in format, utility and presentation - this should hold even for quote-collections/ books.
