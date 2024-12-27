@@ -18,7 +18,7 @@ title = "अन्ध-चितिः"
 ## About
 - [Motivation](/motivation)?
 - How to [contribute](/contribution) esp. to our database?
-- Technical details & [contribution](/technical-details) 
+- Technical details, TODOs & [contribution](/technical-details) 
 
 <details><summary>सिद्ध-सन्देशः (द्रष्टुं नोद्यम्)</summary>
 
