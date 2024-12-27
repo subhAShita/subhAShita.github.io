@@ -27,16 +27,10 @@ function showQuote(quoteId) {
         newUrl = newUrl.replace(/main\/.+/, `main/${quoteId[0]}/${quoteId[1]}/${quoteId[2]}/${quoteId[3]}/${quoteId[4]}/${quoteId}.md`);
         includeElement.setAttribute("url", newUrl);
 
-        includeElement.insertAdjacentHTML('afterend', quoteId);
-
-        // TODO: THis is beign overwritten - why?
-        let inputQuoteId = document.querySelector("#inputQuoteId");
-        if (inputQuoteId) inputQuoteId.value = quoteId;
     }
 }
 
 async function setFilterValueFromQuery(filterType) {
-    // TODO: Why's this not working?
     let queryValue = module_uiLib.default.query.getParam(filterType) || null;
     if (queryValue) {
         const input = document.getElementById(`input_${filterType}`);
@@ -50,8 +44,6 @@ async function initFilterBoxes() {
         let filterType = filterTypes[i];
         let queryValue = module_uiLib.default.query.getParam(filterType) || null;
         module_uiLib.default.navigation.loadDataListFromTSV(`${indexUrl}${filterType}/_summary.tsv`, `datalist_${filterType}`, dropdownTextMaker, dropdownValueMaker, (x) => getRandomQuote(), queryValue, true);
-        await setFilterValueFromQuery(filterType);
-
     }
     console.log("Exiting initFilterBoxes");
 }
@@ -169,12 +161,15 @@ async function pratimAlA() {
     }
 }
 
-document.onload = async () => {
-    document.addEventListener('sdThemeDoneEvent', function (event) {
-        // TODO: This is not being triggered - why?
-        console.log('Handling sdThemeDoneEvent:', event.detail.someData);
-        let inputQuoteId = document.querySelector("#inputQuoteId");
-        inputQuoteId.value = quoteId;
+document.addEventListener('sdThemeDone', function (event) {
+    console.log('Handling sdThemeDoneEvent:', event.detail.someData);
+    for (let i = 0; i < filterTypes.length; i++) {
+        let filterType = filterTypes[i];
+        setFilterValueFromQuery(filterType);
+    }
+    let quoteId = module_uiLib.default.query.getParam("quoteId") || null;
+    let inputQuoteId = document.querySelector("#inputQuoteId");
+    inputQuoteId.value = quoteId;
 
-    });
-}
+});
+console.log("sdThemeDone event listener attached.");
