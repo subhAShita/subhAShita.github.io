@@ -27,7 +27,7 @@ function showQuote(quoteId) {
         newUrl = newUrl.replace(/main\/.+/, `main/${quoteId[0]}/${quoteId[1]}/${quoteId[2]}/${quoteId[3]}/${quoteId[4]}/${quoteId}.md`);
         includeElement.setAttribute("url", newUrl);
 
-        includeElement.insertAdjacentHTML('afterend',quoteId);
+        includeElement.insertAdjacentHTML('afterend', quoteId);
 
         // TODO: THis is beign overwritten - why?
         let inputQuoteId = document.querySelector("#inputQuoteId");
@@ -40,7 +40,7 @@ async function setDropdownValuesFromQuery() {
     for (let i = 0; i < filterTypes.length; i++) {
         let filterType = filterTypes[i];
         let queryValue = module_uiLib.default.query.getParam(filterType) || "*";
-        module_uiLib.default.navigation.loadDropdownFromTSV(`${indexUrl}${filterType}/_summary.tsv`, `dropdown_${filterType}`, dropdownTextMaker, dropdownValueMaker, (x) => getRandomQuote(), queryValue, ignoreHeader=true);
+        module_uiLib.default.navigation.loadDropdownFromTSV(`${indexUrl}${filterType}/_summary.tsv`, `dropdown_${filterType}`, dropdownTextMaker, dropdownValueMaker, (x) => getRandomQuote(), queryValue, ignoreHeader = true);
     }
     console.log("Exiting setDropdownValuesFromQuery");
 }
@@ -112,7 +112,7 @@ async function getRandomQuote() {
     }
     if (quotes.length == 0) {
         let divMessage = document.querySelector("#divMessage");
-        if(divMessage) 
+        if (divMessage)
             divMessage.textContent = "No quotes found.";
         // alert(divMessage.textContent);
         return;
@@ -125,7 +125,7 @@ async function getRandomQuote() {
     module_uiLib.default.query.setParamsAndGo(paramDict);
 }
 
-async function pratimAlA(){
+async function pratimAlA() {
     // Rules per R Ganesh - https://www.prekshaa.in/pratim%C4%81l%C4%81-lovely-garland-world-literary-games
     let includeElement = document.querySelector("#quoteInclude");
     let metadata = JSON.parse(includeElement.dataset.metadataJson);
@@ -136,10 +136,21 @@ async function pratimAlA(){
         const randomLetter = letters[randomIndex];
         console.log(randomLetter, letters);
         var dropdown = document.getElementById(`dropdown_first_letter`);
-        dropdown.value = randomLetter;
-        getRandomQuote();
-    }
-    else {
+        let selectedOption = null;
+        let options = dropdown.options;
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].text.toLowerCase().startsWith(randomLetter)) {
+                selectedOption = options[i];
+                break;
+            }
+        }
+        if (selectedOption) {
+            dropdown.value = selectedOption.value;
+            getRandomQuote();
+        } else {
+            console.error("No index with letter ", randomLetter);
+        }
+    } else {
         divMessage.innerHTML = "<h2>Not implemented. Contribute <a href='https://github.com/subhAShita/subhAShita.github.io/edit/content/saMskRtam/padyam/quote-helper.js'>code?</h2>";
     }
 }
