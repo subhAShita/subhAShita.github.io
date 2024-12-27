@@ -16,6 +16,8 @@ title = "Technical details"
 - For location of databases, see [contribution](../contribution) page.
 
 ## UI
+- Report issues other than the below on [github](https://github.com/subhAShita/subhAShita.github.io/issues/new). 
+
 ## TODOS
 - प्रतिमाला - अनुष्टुभ्-अपाकरणे विकल्पः। अक्षरालाभेऽक्षरान्तरग्रहणम्। 
 - Stats - author, sources etc..
