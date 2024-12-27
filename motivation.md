@@ -18,7 +18,7 @@ unicode_script = "devanagari"
   - and to share our collective labor so that we can benefit more easily from each others' work.
 
 ## A Universal database
-We've set out to build a **database of [subhAShita](https://en.wikipedia.org/wiki/Subhashita)-s (= worthy quotes)*- which is:
+We've set out to build a **database of [subhAShita](https://en.wikipedia.org/wiki/Subhashita)-s (= worthy quotes)*- which is, at least so long as computers and internet lasts (\~200 yrs based on unexploited fuel reserves):
 
 - **Universal**
   - Its goal is to contain within it **every worthy subhAShita**- ever composed.
@@ -27,7 +27,7 @@ We've set out to build a **database of [subhAShita](https://en.wikipedia.org/wik
   - Access it
   - Export it in other formats
   - Present it in any way users will find convenient.
-    - Eg. the upcoming [subhAShita-pratimAlA] app project.
+    - Eg. this [web-page](/saMskRtam/padyam/random), the upcoming [subhAShita-pratimAlA] app project.
 - **Growing constantly in number**
   - sarasvatI still suckles some amongst us at her bosom!
 - **Growing constantly in annotations/ ratings**
