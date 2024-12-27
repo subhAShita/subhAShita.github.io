@@ -97,8 +97,11 @@ async function getRandomQuote() {
     for (let i = 0; i < filterTypes.length; i++) {
         let filterType = filterTypes[i];
         var dropdown = document.getElementById(`dropdown_${filterType}`);
-        let filterValue = dropdown.options[dropdown.selectedIndex].value;
-        paramDict[filterType] = filterValue;
+        let filterValue = "*";
+        if (dropdown.selectedIndex != -1) {
+            let filterValue = dropdown.options[dropdown.selectedIndex].value;
+            paramDict[filterType] = filterValue;
+        } 
         if (filterValue != "*") {
             quotes = await getQuotes(filterType, filterValue, quotes);
         }
