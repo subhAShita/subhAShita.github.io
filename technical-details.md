@@ -19,3 +19,5 @@ title = "Technical details"
 ## TODOS
 - प्रतिमाला
 - Stats - author, sources etc..
+- Access keys/ shortcuts
+- Replace dropdowns with typable filters.
