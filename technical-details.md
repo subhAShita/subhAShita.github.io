@@ -51,3 +51,5 @@ npm run watch
 - Load filter values from query url
 - TODOs in quote-helper.js.
 - Better randomization.
+- AI to annotate with topics and translations (backend).
+- AI translations - dharmamitra, bing etc..
