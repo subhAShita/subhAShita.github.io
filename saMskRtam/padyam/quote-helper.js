@@ -126,7 +126,7 @@ async function getRandomQuote() {
     paramDict["quoteId"] = randomQuote;
     console.log(paramDict, randomQuote);
     // alert(JSON.stringify(paramDict));
-    module_uiLib.default.query.setParamsAndGo(paramDict);
+    module_uiLib.query.setParamsAndGo(paramDict);
 }
 
 async function pratimAlA() {
