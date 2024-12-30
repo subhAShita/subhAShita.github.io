@@ -33,6 +33,7 @@ title = "अन्ध-चितिः"
 - How to [contribute](/contribution) esp. to our database?
 - Technical details, TODOs & [contribution](/technical-details) 
 
+<div class="videoEmbed"  caption="How to use? कथम् प्रयोक्तव्यम्? इदं चित्रं निर्मितम् ईक्षताम् -" src="https://youtu.be/wYXInwpqZC4"></div>
 
 
 <details><summary>सिद्ध-सन्देशः (द्रष्टुं नोद्यम्)</summary>
