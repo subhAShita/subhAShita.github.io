@@ -18,13 +18,13 @@ title = "अन्ध-चितिः"
 
 
 
-|||||
-|--|--|--|--|
-|<u>R</u>atings|<input placeholder="*" list="datalist_ratings" id="input_ratings" accesskey="r" onchange="getRandomQuote()"></input> |<u>T</u>opics     |<input placeholder="*" list="datalist_topics" id="input_topics" accesskey="t" onchange="getRandomQuote()"></input> |
-|<u>M</u>eters     |<input placeholder="*" list="datalist_meters" id="input_meters" accesskey="s" onchange="getRandomQuote()"></input>               |<u>S</u>ource     |<input placeholder="*" list="datalist_sources" id="input_sources" accesskey="s" onchange="getRandomQuote()"></input>|
-|||2ndary Source     |<input placeholder="*" list="datalist_secondary_sources" id="input_secondary_sources" onchange="getRandomQuote()"></input> |
-|<u>R</u>asas|<input placeholder="*" list="datalist_rasas" id="input_rasas" onchange="getRandomQuote()"></input>|<u>1</u>st Letter |<input placeholder="*" list="datalist_first_letter" id="input_first_letter" accesskey="f" onchange="getRandomQuote()"></input>|
-|<button submit onclick="getRandomQuote()" accesskey="a"><u>A</u>gain</button> |<button submit onclick="pratimAlA()" accesskey="p"><u>प्रतिमाला/अन्त्याक्षरी</button>||<input type="text" id="inputQuoteId"/>|
+|                                                                                     ||||
+|-------------------------------------------------------------------------------------|--|--|--|
+| <u>R</u>atings                                                                      |<input placeholder="*" list="datalist_ratings" id="input_ratings" accesskey="r" onchange="getRandomQuote()"></input> |<u>T</u>opics     |<input placeholder="*" list="datalist_topics" id="input_topics" accesskey="t" onchange="getRandomQuote()"></input> |
+| <u>M</u>eters                                                                       |<input placeholder="*" list="datalist_meters" id="input_meters" accesskey="s" onchange="getRandomQuote()"></input>               |<u>S</u>ource     |<input placeholder="*" list="datalist_sources" id="input_sources" accesskey="s" onchange="getRandomQuote()"></input>|
+|                                                                                     ||2ndary Source     |<input placeholder="*" list="datalist_secondary_sources" id="input_secondary_sources" onchange="getRandomQuote()"></input> |
+| <u>R</u>asas                                                                        |<input placeholder="*" list="datalist_rasas" id="input_rasas" onchange="getRandomQuote()"></input>|<u>1</u>st Letter |<input placeholder="*" list="datalist_first_letter" id="input_first_letter" accesskey="f" onchange="getRandomQuote()"></input>|
+| <button submit onclick="getRandomQuote()" accesskey="a">अन्यत् <u>N</u>ext</button> |<button submit onclick="pratimAlA()" accesskey="p"><u>प्रतिमाला/अन्त्याक्षरी</button>||<input type="text" id="inputQuoteId"/>|
 
 <div id="divMessage"></div>
 
