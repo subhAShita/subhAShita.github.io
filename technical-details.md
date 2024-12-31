@@ -45,11 +45,12 @@ npm run watch
 ```
 
 ## TODOs
-- प्रतिमाला - अनुष्टुभ्-अपाकरणे विकल्पः। अक्षरालाभेऽक्षरान्तरग्रहणम्। 
-- Stats - author, sources etc..
-- Access keys/ shortcuts
-- Load filter values from query url
-- TODOs in quote-helper.js.
-- Better randomization.
+- UI
+  - प्रतिमाला - अनुष्टुभ्-अपाकरणे विकल्पः। अक्षरालाभेऽक्षरान्तरग्रहणम्। 
+  - Access keys/ shortcuts
+  - TODOs in quote-helper.js.
+  - Better randomization.
+- backend
+  - Dump subhAShita pages for indexing.
 - AI to annotate with topics and translations (backend).
 - AI translations - dharmamitra, bing etc..
